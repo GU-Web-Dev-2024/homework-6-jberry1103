@@ -32,7 +32,7 @@
                 let interval; 
                 let paragraph = $("p")
                 paragraph.attr("id", "timer");
-                paragraph.addClass("timer-backgroubd");
+                paragraph.addClass("timer-background");
                 let image = $("<img />"); 
                 image.attr("src","pumpkin.png");
                 $(".wrapper").append(image);
@@ -42,7 +42,7 @@
                 wrapper.css("text-align", "center"); 
                 wrapper.css("color", "white");
                 timer.css("position", "absolute");
-                timer.css("background-color", "grey");
+                $(".timer-background").css("background-color", "grey");
                 timer.css("top", "55%");
                 timer.css("left", "35.5%");
                 timer.css("width", "200px");
@@ -84,10 +84,12 @@
                 buttonStart.on('click', function() {
                     clearInterval(interval);
                     interval = setInterval(startTimer, 10);
+                    $(".timer-background").css("background-color", " rgb(51, 165, 50)");
                     
                 });
                 buttonStop.on('click', function () {
                     clearInterval(interval);
+                    $(".timer-background").css("background-color", " rgb(251, 18, 47)");
                 });
     
                 buttonReset.on('click', function () {
@@ -96,6 +98,7 @@
                     seconds = "00";
                     appendTens.text(tens);
                     appendSeconds.text(seconds);
+                    $(".timer-background").css("background-color", " grey");
                 });
                 
                 
