@@ -13,10 +13,13 @@ paragraph.attr("id", "timer");
 paragraph.addClass("timer-background");
 let $image = $("<img />"); 
 $image.attr("src","pumpkin.png");
+
 $(".wrapper").append($image);
 let $timer = $("#timer");
 let $wrapper = $(".wrapper");
-$wrapper.css("position", "relative");
+
+$wrapper.css("position", "fixed");
+$wrapper.css("width", "800px")
 $wrapper.css("text-align", "center"); 
 $wrapper.css("color", "black");
 $timer.css("position", "absolute");
@@ -54,10 +57,10 @@ $(".status-buttons").css("border-color", "#FF8C00");
 $(".status-buttons").css("border-left-color", "orange");
 $(".status-buttons").css("border-top-color", "orange");
 $(".status-buttons").css("border-width", "5px");
-$buttonStart.css("position", "absolute");
 $buttonStart.css("font-family", "Georgia");
 $buttonStart.css("top", "70%");
 $buttonStart.css("left", "30%");
+$buttonStart.css("position", "absolute");
 $buttonStart.css("color", "white");
 $buttonStart.css("background-color", "#FF8C00");
 $buttonStart.css("height", "40px");
