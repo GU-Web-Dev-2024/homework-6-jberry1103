@@ -82,6 +82,9 @@ $buttonReset.css("background-color", "#FF8C00");
 $buttonReset.css("height", "40px");
 $buttonReset.css("width", "90px");
 
+let buttons = {
+
+}
 $(document).ready(function() {
 $buttonStart.on('click', function() {
     clearInterval(interval);
@@ -105,6 +108,8 @@ $buttonReset.on('click', function () {
     $appendSeconds.text(seconds);
     $(".timer-background").css("background-color", " grey");
 });
+
+
 
 function adjustOpacity() {
         opacity -= 0.2
